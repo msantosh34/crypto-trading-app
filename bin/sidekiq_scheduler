@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+require 'sidekiq/cli'
+
+app_dir = File.expand_path('..', __dir__)
+Dir.chdir(app_dir)
+
+require_relative 'config/environment'
+
+Sidekiq::CLI.instance.run

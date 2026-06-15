@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+require 'sidekiq/cli'
+require 'sidekiq-scheduler'
+
+Sidekiq::CLI.instance.run
